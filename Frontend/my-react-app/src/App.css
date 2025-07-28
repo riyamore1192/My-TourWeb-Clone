@@ -1,0 +1,368 @@
+/* .container {
+  position: relative; 
+  width: 100%;
+  height: 100vh;
+} 
+
+ .vde {
+  object-fit: cover;
+  width: 100%;
+  height: 100vh;
+  object-position: center;
+  position: relative;
+  position: absolute; Positions the video behind the text 
+  top: 0; 
+  left: 0;
+  z-index: -1;
+}  
+
+.hero-container {
+  position: absolute; 
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex; 
+  justify-content: center; 
+  align-items: left; 
+  text-align: left;
+  flex-direction: column; 
+  color: white; 
+  z-index: 1; 
+  margin-left: 7vw;
+} */
+
+/* #form {
+  margin-left: 3vw;
+}
+
+.hero-text h1 {
+  font-size: 3rem; 
+  font-weight: bold;
+}
+
+.hero-text p {
+  font-size: 1.5rem; 
+  font-weight: lighter;
+} */
+
+/* .hero-input {
+  width: 60vw;
+  height: 30vh;
+  background-color: antiquewhite;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 2ve;
+  align-items: center;
+  justify-content: space-around;
+} */
+/* .TT {
+  margin-left: 1vw;
+  margin-top: 1vw;
+  display: flex;
+}
+.OO {
+  font-size: 2rem;
+  color:white;
+  font-family:Arial, Helvetica, sans-serif ;
+  font-weight: 700;
+}
+p {
+  font-size: 1.5rem;
+  color: white;
+  font-family:Arial, Helvetica, sans-serif ;
+  font-weight: 500;
+} */
+
+/* css for main div */
+/* .destin{
+  margin-left: 1vw;
+}
+.DATE {
+  margin-right: 7vw;
+}
+.RANGE {
+  margin-right: 5vw;
+}
+.MM {
+  color: black;
+  font-size: 1.2rem;
+} */
+/* input[type=text] {
+  width: 15vw;
+  height: 5vh;
+  background-color: white;
+ color: black;
+ border: 1px solid red;
+ border-radius: 10px;
+ padding: 2px;
+} */
+
+/* input[type=date] {
+  width: 15vw;
+  height: 5vh;
+  background-color: white;
+ color: black;
+ border: 1px solid red;
+ border-radius: 10px;
+ padding: 2px;
+ font-size: 1rem;
+ margin-left: 2vw;
+} */
+
+/* #dat,#desti,#rag {
+   font-size: 1.2rem;
+   color: black;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   font-weight: 300;
+}
+#rag {
+  display: flex;
+  flex-direction: row;
+} */
+
+/* #destination {
+  margin-top: 1vw;
+} */
+
+#form {
+  margin-top: 2vw;
+}
+
+#des {
+  margin-left: 1vw;
+}
+
+#range {
+  margin-right: 1vw;
+}
+
+#button {
+  margin-left: 32vw;
+}
+
+#Navlogin {
+  padding: 1vw 2vw;
+}
+
+/* hero css */
+
+#middle{
+  margin-left: 3vw;
+}
+
+@media only screen and (max-width:540px) {
+
+  #button {
+    margin-left: 24vw;
+    margin-bottom: -1vw;
+  }
+
+  #destination {
+    width: 80vw;
+    margin-left: 2vw;
+  }
+
+  label {
+    margin-left: 2vw;
+  }
+
+  #middle {
+    margin-left: 4vw;
+  }
+  
+}
+
+@media only screen and (max-width:860px) {
+  #middle {
+    margin-left: 4vw;
+  }
+
+  /* #form {
+    margin-left: 9vw;
+  } */
+}
+
+@media only screen and (max-width:950px) {
+  #form {
+    width: 93vw;
+    /* height: 23vh; */
+  }
+
+  /* #middle {
+    margin-left: -2vw;
+  } */
+}
+
+/* for Places css  */
+
+#bord {
+  border-color: aqua;
+  margin-left: 10vw;
+  padding-top: 2vw;
+}
+
+#place {
+  padding: 2vw 2vw;
+  gap: 5vw;
+  margin-left: 3vw;
+}
+
+#card {
+  padding-left: 1vw;
+}
+
+#line {
+  background-color: rgb(137, 240, 137);
+  width: 45vw;
+  height: 5px;
+  margin-left: 10vw;
+}
+
+#tour {
+  border-radius: 25px;
+}
+
+/* page - 3 css   */
+
+#d-img {
+  padding: 1vw;
+  /* border-radius: 14%; */
+}
+
+#box {
+  margin: 1vw ;
+  border: 1px solid darkred;
+  padding: 1vw;
+  /* border-top-left-radius: 35px;
+  border-bottom-right-radius: 35px; */
+}
+
+#border {
+  border: 2px solid cornflowerblue;
+  border-top-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  padding: 2vw;
+}
+
+#border p{
+  margin-top: 1vw;
+}
+
+#icon {
+  margin-top: 2vw;
+}
+
+#all {
+  padding: 8vw;
+}
+
+ #secImg {
+  border-radius: 20px;
+} 
+
+/* page 4 css */
+
+#header {
+  padding-left: 25vw;  
+}
+
+/* css for the footer*/
+
+#footer {
+  margin-left: 6vw;
+  margin-top: 4vw;
+  padding-left: 3vw;
+}
+
+#LINK {
+  margin-top: 3vw;
+}
+
+#social {
+  margin: 2vw 3vw;
+}
+
+/* About css */
+
+#about{
+  margin-top: 3vw;
+  margin-left: 6vw;
+}
+
+iframe {
+  margin: 3vw 9vw;
+}
+
+#ex{
+  margin-top: 1vw;
+}
+
+/* blogdetail css */
+
+#detail {
+  margin: 2vw 7vw;
+}
+
+#detail p{
+  padding-top: 0.5vw;
+}
+
+/* css for login form */
+
+#login{
+  margin-left: 26vw;
+  margin-top: 2vw;
+} 
+
+#heading {
+  text-align: center;
+  /* margin: 5vw 9vw; */
+}
+
+
+
+.form {
+  display: flex;
+  flex-direction: column;
+  padding: 3vw 3vw;
+  gap: 2vw;
+}
+
+/* booking page */
+
+#inner {
+  border-radius: 20px;
+  margin:7vw 20vw;
+  padding: 3vw 2vw;
+}
+
+/* #logbutton {
+  padding: 1vw;
+} */
+
+#loginbutton {
+  padding: 2vw 2vw;
+}
+
+#auth {
+  padding-top:3vw ;
+}
+
+#authbutton {
+  padding: 1vw 2vw; 
+}
+
+#inside {
+  padding: 2vw 2vw;
+  border-radius: 40px;
+}
+
+#h2{
+  text-align: center;
+}
+
+/* #form{
+  padding-top: 4vw;
+} */
