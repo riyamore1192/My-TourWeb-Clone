@@ -1,85 +1,64 @@
-import React from "react"
-import { createBrowserRouter, Route, RouterProvider, Routes } from "react-router-dom"
+
+import React, { Suspense } from "react";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "./componants/Layout";
 import Home from "./Pages/Home";
-import { Suspense } from "react";
-import About from "./Pages/About";
-import Blogdetail from "./Pages/Blogdetail";
-import RoutePlace from "./Pages/Routeplace";
-import Blog from "./Pages/Blog";
-import LoginComponent from "./Pages/Logincompo";
-import Authcompo from "./Pages/Authcompo";
 import Logout from "./Pages/Logout";
+import ErrorBoundary from "./componants/ErrorBoundary";
 
-// const About = React.lazy(() => import("./Pages/About"))
+// Lazy-loaded pages
+const About = React.lazy(() => import("./Pages/About"));
+const Blogdetail = React.lazy(() => import("./Pages/Blogdetail"));
+const LoginComponent = React.lazy(() => import("./Pages/Logincompo"));
+const Blog = React.lazy(() => import("./Pages/Blog"));
+const RoutePlace = React.lazy(() => import("./Pages/Routeplace"));
+const Authcompo = React.lazy(() => import("./Pages/Authcompo"));
 
+// Optional Loader component for Suspense fallback
+const Loader = () => (
+  <div className="flex justify-center items-center h-screen text-2xl font-bold">
+    Loading page...
+  </div>
+);
+
+// Routes
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
     children: [
+      { path: "/", element: <Home /> },
+      { path: "/about", element: <About /> },
       {
-        path: "/",
-        element: <div>
-          <Home />
-        </div>
-      },
-
-      {
-        path: "/about",
+        path: "/blog",
         element: (
-          // <Suspense fallback={<div>Loading about...</div>}>
-            <About />
-          // </Suspense>
+          <ErrorBoundary>
+            <Blog />
+          </ErrorBoundary>
         ),
       },
       {
-        path: "/blog",
-        element: <div>
-          <Blog />
-        </div>
-      },
-      {
         path: "/blog/:id",
-        element: <div>
-          <Blogdetail />
-        </div>
+        element: (
+          <ErrorBoundary>
+            <Blogdetail />
+          </ErrorBoundary>
+        ),
       },
-      {
-        path: "/places",
-        element: <div>
-          <RoutePlace />
-        </div>
-      },
+      { path: "/places", element: <RoutePlace /> },
     ],
   },
-  {
-    path: "/login",
-    element: <div>
-      <LoginComponent />
-      {/* <Authcompo /> */}
-    </div>
-  },
-  {
-    path: "/booking",
-    element: <div>
-      <Authcompo />
-    </div>
-  },
-  {
-    path: "/logout",
-    element: <div>
-      <Logout />
-    </div>
-  },
-])
-function App() {
+  { path: "/login", element: <LoginComponent /> },
+  { path: "/booking", element: <Authcompo /> },
+  { path: "/logout", element: <Logout /> },
+]);
 
+function App() {
   return (
-    <>
+    <Suspense fallback={<Loader />}>
       <RouterProvider router={router} />
-    </>
-  )
+    </Suspense>
+  );
 }
 
-export default App
+export default App;

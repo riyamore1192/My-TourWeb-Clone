@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo,useCallback } from "react";
 import "../../App.css"
 // import Img1 from "../../assets/img1.jpg"
 import BlogCard from "./BlogCard";
@@ -78,7 +78,19 @@ const BlogData = [
 
 ]
 
-const BlogComp = () => {
+const BlogComp = () => {  
+
+    const handleClick = useCallback(() => {
+        window.scrollTo(0,0);
+    },[])
+
+const blogCards = useMemo(() => {
+    return BlogData.map((item) => (
+    <BlogCard onClick={handleClick} key={item.id} {...item} />
+    ));
+  }, []);
+
+
     return (
         <div>
             <div data-aos="fade-up" className="container">
@@ -86,11 +98,12 @@ const BlogComp = () => {
                     Our latest Blog
                 </h1>
                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
-                   {
-                        BlogData.map((item, index) => (
-                            <BlogCard key={index} {...item} />
+                   {/* {
+                        BlogData.map((item) => (
+                            <BlogCard key={item.id} {...item} />
                         ))
-                    }
+                    } */}
+                    {blogCards}
                 </div>
             </div>
         </div>
